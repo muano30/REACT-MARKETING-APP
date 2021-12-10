@@ -1,0 +1,47 @@
+.jobList-Table{
+    width: 100%;
+    /* margin-left: 40%; */
+}
+/* table { */
+    /* background: steelblue */
+/* } */
+
+thead, tbody {
+    display: block;
+}
+
+tbody {
+    overflow-y: scroll;
+    height: 100px;
+}
+ 
+thead th:nth-child(1), tbody td:nth-child(1) {
+   /* background: pink; */
+   width: 90px;
+   word-break: break-all;
+}
+
+thead th:nth-child(2), tbody td:nth-child(2) {
+   /* background: olive; */
+   width: 140px;
+   word-break: break-all;
+}
+
+thead th:nth-child(3), tbody td:nth-child(3) {
+   /* background: tomato; */
+   width: 80px;
+   word-break: break-all;
+}
+
+thead th:nth-child(4), tbody td:nth-child(4) {
+    /* background: tomato; */
+    width: 150px;
+    word-break: break-all;
+ }
+
+
+thead th:nth-child(5), tbody td:nth-child(5) {
+    /* background: tomato; */
+    width: 150px;
+    word-break: break-all;
+ }

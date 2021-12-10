@@ -1,0 +1,46 @@
+.jobForm{
+    border: 1px solid black;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-top: 1rem;
+    padding-bottom: 2rem; 
+    border-radius: .5rem;
+    margin-top: 4rem;
+}
+
+.jobButton{
+    width: 40%;
+    height: 2.5rem;
+    margin-top: 1rem;
+    border-radius: .3rem;
+    font-size: 1rem;
+}
+
+.jobForm input{
+    width: 81.5%;
+} 
+
+.jobForm-Input input {
+    width: 80%;
+    padding: .8rem;
+    font-size: 1rem;
+}
+
+#rand{
+	display:inline-block;
+	position: relative;
+	}
+#rand input{
+	padding-left:15px;
+    width: 462px;
+    word-break: break-all;
+	}
+#rand:before {
+	position: absolute;
+    content:"R";
+    left:5px;
+	top:1.6rem;
+ 	}
+
+
+     

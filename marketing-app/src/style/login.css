@@ -1,0 +1,50 @@
+.loginForm{
+    margin-top: 4rem;
+    border: 1px solid black;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-bottom: 2rem;
+    border-radius: 0.3rem;
+}
+
+input{
+    padding: 0.5rem;
+    margin-top: .8rem;
+    width: 80%;
+    border-radius: .3rem;
+    font-size: 1rem;
+}
+
+select{
+    width: 83.5%;
+    height: 2.2rem;
+    padding: 0.5rem;
+    margin-top: .8rem;
+    border-radius: .3rem;
+    font-size: 1rem;
+}
+
+.loginButton{
+    width: 40%;
+    height: 2rem;
+    margin-top: 1rem;
+    border-radius: .3rem;
+    font-size: 1rem;
+
+}
+
+input[type=text], select, textarea {
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+
+input[type=number], select, textarea {
+    border: 1px solid #ccc;
+    
+  }
+
+  .login-option{
+      font-size: 1rem;
+  }

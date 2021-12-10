@@ -1,0 +1,1 @@
+export const JOB_MESSAGE = 'JOB_MESSAGE'
