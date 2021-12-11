@@ -1,15 +1,36 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import '../style/joblist.css'   
-   
+import '../style/joblist.css'
+import { useHistory } from 'react-router-dom';
+import { jobMessage } from '../Redux/actions/jobMessage';
 
-function JobList(props) {
+
+function JobList() {
+   
+const dispatch = useDispatch()
   const jobInfo = useSelector(state => state.jobInfo.jobMessage)
+  
+  const direct = () => {
+    history.push('login')
+}
+
+let history = useHistory();
+
+
+// const handleSelectedJob = () => {
+  
+// }
+
+const handleBack = (e) => {
+    e.preventDefault();
+    direct();
+    
+  };
   // console.log("jobInfo", jobInfo)
 
   return (
     <div className="container">
-      
+
       <h1>JOB LIST</h1>
       <table className="jobList-Table">
         <thead>
@@ -33,7 +54,7 @@ function JobList(props) {
                 <td>{item.place}</td>
                 <td className="rand">{item.salary}</td>
                 <td>{item.position}</td>
-                <td><button type="select">Select Job</button></td>
+                <td><button type="selectJob">Select Job</button></td>
               </tr>
             )
           }
@@ -41,6 +62,7 @@ function JobList(props) {
 
         </tbody>
       </table>
+          <button  className="backButton" type="Submit" onClick={handleBack}>Back</button>
 
     </div>
   )

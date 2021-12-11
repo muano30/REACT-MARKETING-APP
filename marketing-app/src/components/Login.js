@@ -27,7 +27,10 @@ function Login(){
  
 const handleSubmit = (e) => {
     e.preventDefault();
+  if(loginForm.name && loginForm.surname && loginForm.dropdown !== ""){
     dispatch(addMessage(loginForm), redirect())
+
+  }
 }
 
 
@@ -40,7 +43,7 @@ const handleSubmit = (e) => {
         <h1>LOGIN</h1>
         </div>
 <div>
-        <input type="text" placeholder="Fisrst Name"
+        <input type="text" placeholder="First Name"
         onChange={handleChange}
         name = "name"
         value ={loginForm.name}
@@ -58,7 +61,7 @@ const handleSubmit = (e) => {
 </div>
 
 <select onChange={handleChange} name = "dropdown" value ={loginForm.dropdown}>
-    <option selected="DefaultValue">Select...</option>
+    <option selected defaultvalue>Select...</option>
     <option className="login-option">Looking for job</option>
     <option className="login-option">Advertising job</option>
 
@@ -69,14 +72,7 @@ const handleSubmit = (e) => {
             </div>
 
       </form>
-<ul>
-      {message.map((text, index)=>{
-        return(
-          <li key={index}>{text}</li>
-        )
-      })}
-      </ul> 
-
+      
     </div>
   )
 }

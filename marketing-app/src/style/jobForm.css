@@ -43,4 +43,13 @@
  	}
 
 
-     
+    
+     @media (min-width: 0px) and (max-width: 1366px) {
+        #rand input{
+            /* position: relative; */
+            padding-left: 17px;
+            width: 324px;
+            word-break: break-all;
+            }
+
+     }

@@ -5,7 +5,8 @@ import '../style/jobForm.css'
 import { useHistory } from 'react-router-dom';
 
 
-function JobForm(props) {
+
+function JobForm() {
    
 const dispatch = useDispatch()
 const jobInfo = useSelector(state => state.jobInfo.jobMessage)
@@ -26,16 +27,29 @@ const handleChange = (e) => {
           history.push('/joblist')
         }
 
+        const direct = () => {
+                history.push('/login')
+        }
+
+        const handleBack = (e) => {
+                e.preventDefault();
+                direct()
+              };
+
 const handleSubmit = (e) => {
         e.preventDefault();
-
+if(advertiseForm.jobname && advertiseForm.place && advertiseForm.position && advertiseForm.salary !== ''){
         dispatch(jobMessage(advertiseForm), redirect())
+
+}
 
 }
 
 
     return (
       <div className="jobForm-header">
+<button  className="backButton" type="Submit" onClick={handleBack}>Back</button>
+
         <form className="jobForm" onSubmit={handleSubmit}>
 <div className="jobForm-Input">
         <h1>ADVERTISING JOB FORM</h1>
@@ -56,7 +70,7 @@ const handleSubmit = (e) => {
 
 </div>
 
-<div className="jobForm-Input" id="rand">
+<div className="jobForm-Input" id ="rand">
         <input type="number" placeholder="Salary"
               onChange={handleChange}
               name = "salary"
@@ -74,6 +88,7 @@ const handleSubmit = (e) => {
 </div>
 
 <button  className="jobButton" type="submit">Submit</button>
+
 </form>
 
       </div>

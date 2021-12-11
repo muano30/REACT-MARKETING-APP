@@ -8,10 +8,10 @@ function Navbar() {
 
   return (
     <div>
-      <button onClick={() => navigatePage('login')}> Login </button>
-      <button onClick={() => navigatePage('joblist')}>JOBLIST</button>
-      <button onClick={() => navigatePage('appliedjobs')}>APPLIED JOB</button>
-      <button onClick={() => navigatePage('jobform')}>JOBFORM</button>
+      {/* <button onClick={() => navigatePage('login')}> Login </button> */}
+      {/* <button onClick={() => navigatePage('joblist')}>JOBLIST</button>  */}
+      {/* <button onClick={() => navigatePage('appliedjobs')}>APPLIED JOB</button> */}
+      {/* <button onClick={() => navigatePage('jobform')}>JOBFORM</button> */}
 
     </div>
   )

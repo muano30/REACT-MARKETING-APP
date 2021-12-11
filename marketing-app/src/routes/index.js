@@ -6,10 +6,20 @@ import Login from '../components/Login';
 import history from '../history';
 import Navbar from '../components/Navbar'
 
+
 export const mainRoutes = () => {
   return (
+
+    
     <Router history={history}>
       <Navbar />
+      <Route
+        exact
+        strict
+        path="/"
+        render={props => <Login  {...props} />}
+
+      />
       <Route
         exact
         strict

@@ -1,9 +1,27 @@
 import React from 'react'
 import '../style/appliedJob.css'
+import { useHistory } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+
+
+
 
 function AppliedJobs() {
+  const jobInfo = useSelector(state => state.jobInfo.jobMessage)
+
+  let history = useHistory();
+
+  const direct = () => {
+    history.push('/joblist')
+}
+
+const handleBack = (e) => {
+    e.preventDefault();
+    direct()
+  };
   return (
     <div>
+      
       
       <h1>APPLIED JOBS</h1>
 
@@ -19,15 +37,14 @@ function AppliedJobs() {
         </thead>
 
         <tbody>
-          <tr>
-            <td>IT</td>
-            <td>MIDRAND</td>
-            <td>R3000</td>
-            <td>JUNIOR DEVELOPER</td>
+          {jobInfo.map((item, index)=>{
 
-          </tr>
+          })}
+         
         </tbody>
       </table>
+      <button  className="backButton" type="Submit" onClick={handleBack}>Back</button>
+
 
     </div>
   )
