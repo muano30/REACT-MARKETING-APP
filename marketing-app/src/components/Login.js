@@ -69,13 +69,13 @@ const handleSubmit = (e) => {
             </div>
 
       </form>
-<ul>
-      {message.map((text, index)=>{
-        return(
-          <li key={index}>{text}</li>
-        )
-      })}
-      </ul> 
+// <ul>
+//       {message.map((text, index)=>{
+//         return(
+//           <li key={index}>{text}</li>
+//         )
+//       })}
+//       </ul> 
 
     </div>
   )
