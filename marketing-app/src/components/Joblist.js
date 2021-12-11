@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import '../style/joblist.css'
 import { useHistory } from 'react-router-dom';
-import { jobMessage } from '../Redux/actions/jobMessage';
+// import { jobMessage } from '../Redux/actions/jobMessage';
 
 
 function JobList() {
