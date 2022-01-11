@@ -1,6 +1,6 @@
 .jobList-Table{
     width: 100%;
-    /* margin-left: 40%; */
+    /* margin-left: 30%; */
 }
 /* table { */
     /* background: steelblue */
@@ -49,6 +49,8 @@ thead th:nth-child(5), tbody td:nth-child(5) {
  .rand{
 	display:inline-block;
 	position: relative;
+    /* margin-left: 2rem; */
+    /* left: 0; */
 	}
 .rand input{
 	padding-left:15px;
@@ -58,7 +60,7 @@ thead th:nth-child(5), tbody td:nth-child(5) {
 .rand:before {
 	position: absolute;
     content:"R";
-    left:5px;
+    left:-5px;
 	top:0.1rem;
  	}
 

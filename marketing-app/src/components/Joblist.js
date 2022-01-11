@@ -2,24 +2,31 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import '../style/joblist.css'
 import { useHistory } from 'react-router-dom';
+import { jobApplied } from '../Redux/actions/jobapplied';
+
 // import { jobMessage } from '../Redux/actions/jobMessage';
 
 
 function JobList() {
    
-const dispatch = useDispatch()
+  const dispatch = useDispatch()
   const jobInfo = useSelector(state => state.jobInfo.jobMessage)
-  
   const direct = () => {
     history.push('login')
 }
 
 let history = useHistory();
 
+const directAppliedJobs = () => {
+  history.push('appliedjobs')
+}
 
-// const handleSelectedJob = () => {
-  
-// }
+  const selectJob = (id) => {
+    let jobs = jobInfo.find(job => job.id === id)
+    dispatch(jobApplied(jobs))
+    directAppliedJobs();
+  }
+
 
 const handleBack = (e) => {
     e.preventDefault();
@@ -47,14 +54,14 @@ const handleBack = (e) => {
         <tbody>
           {/* {console.log("jobInfo", jobInfo)} */}
 
-          {jobInfo.map((item, index) => {
+          {jobInfo.map((item) => {
             return (
-              <tr key={index}>
+              <tr key={item.id}>
                 <td>{item.jobname}</td>
                 <td>{item.place}</td>
                 <td className="rand">{item.salary}</td>
                 <td>{item.position}</td>
-                <td><button type="selectJob">Select Job</button></td>
+                <td><button onClick={()=> selectJob(item.id)} type="selectJob">Select Job</button></td>
               </tr>
             )
           }

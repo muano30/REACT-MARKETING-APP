@@ -3,7 +3,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import {jobMessage} from '../Redux/actions/jobMessage'
 import '../style/jobForm.css'
 import { useHistory } from 'react-router-dom';
-
+import {v4 as uuidv4} from 'uuid'
 
 
 function JobForm() {
@@ -37,9 +37,11 @@ const handleChange = (e) => {
               };
 
 const handleSubmit = (e) => {
+        const {jobname, place,position, salary} = advertiseForm
         e.preventDefault();
-if(advertiseForm.jobname && advertiseForm.place && advertiseForm.position && advertiseForm.salary !== ''){
-        dispatch(jobMessage(advertiseForm), redirect())
+        let newAdvertiseForm = {id: uuidv4(),jobname, place,position, salary} 
+if(jobname && place && position && salary !== ''){
+        dispatch(jobMessage(newAdvertiseForm), redirect())
 
 }
 

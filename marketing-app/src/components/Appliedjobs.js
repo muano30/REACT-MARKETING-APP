@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 
 function AppliedJobs() {
-  const jobInfo = useSelector(state => state.jobInfo.jobMessage)
+  const appliedJob = useSelector(state => state.appliedJob.appliedJob)
 
   let history = useHistory();
 
@@ -19,6 +19,8 @@ const handleBack = (e) => {
     e.preventDefault();
     direct()
   };
+
+ 
   return (
     <div>
       
@@ -37,9 +39,15 @@ const handleBack = (e) => {
         </thead>
 
         <tbody>
-          {jobInfo.map((item, index)=>{
-
-          })}
+          {appliedJob.map((item)=>{
+            return(    
+     <tr key={item.id}>
+     <td>{item.jobname}</td>
+     <td>{item.place}</td>
+     <td className="rand">{item.salary}</td>
+     <td>{item.position}</td>
+   </tr>
+          )})}
          
         </tbody>
       </table>
