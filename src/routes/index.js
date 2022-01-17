@@ -13,18 +13,19 @@ export const mainRoutes = () => {
     
     <Router history={history}>
       <Navbar />
+
       <Route
         exact
         strict
-        path="/"
+        path="/REACT-MARKETING-APP/"
         render={props => <Login  {...props} />}
 
       />
       <Route
         exact
         strict
-        path="/login*"
-        render={props => <Login  {...props} />}
+        path="/login"
+        render={props => <Login/>}
 
       />
       <Route
