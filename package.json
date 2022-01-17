@@ -1,6 +1,6 @@
 {
   "name": "marketing-app",
-  "homepage": "https://muano30.github.io/REACT-MARKETING-APP",
+  "homepage": "https://muano30.github.io/REACT-MARKETING-APP/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +12,7 @@
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.0",
     "redux": "^4.1.2",
     "uuid": "^8.3.2",
     "web-vitals": "^1.0.1"
